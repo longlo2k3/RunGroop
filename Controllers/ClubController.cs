@@ -1,27 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Object.Data;
+using Object.Interfaces;
 using Object.Models;
 
 namespace Object.Controllers
 {
     public class ClubController : Controller
     {
-        private readonly ApplicationDbContext _context;
-        public ClubController(ApplicationDbContext context)
+        private readonly IClubRepository _clubRepository;
+        public ClubController( IClubRepository clubRepository)
         {
-            _context = context;
+            _clubRepository = clubRepository;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            List<Club> clubs = _context.Clubs.ToList();
+            IEnumerable<Club> clubs = await _clubRepository.GetAll();
             return View(clubs);
         }
-        public IActionResult Detail(int Id)
+        public async Task<IActionResult> Detail(int Id)
         {
-            Club club = _context.Clubs.Include(a => a.Address).FirstOrDefault(p => p.Id==Id);
-            List<Club> clubs = _context.Clubs.ToList();
-            ClubDetailsViewModel viewModel = new ClubDetailsViewModel
+            Club club = await _clubRepository.GetByIdAsync(Id);
+            IEnumerable<Club> clubs = await _clubRepository.GetAll();
+            ClubDetailsViewModel viewModel = new ClubDetailsViewModel()
             {
                 Club = club,
                 ClubList = clubs
