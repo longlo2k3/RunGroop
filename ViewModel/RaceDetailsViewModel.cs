@@ -1,4 +1,6 @@
-﻿namespace Object.Models
+﻿using Object.Models;
+
+namespace Object.ViewModel
 {
     public class RaceDetailsViewModel
     {

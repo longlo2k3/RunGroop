@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Object.Data;
 using Object.Interfaces;
 using Object.Models;
+using Object.ViewModel;
 
 namespace Object.Controllers
 {

@@ -135,3 +135,5 @@ C:\Users\Admin\Desktop\Object\Object\obj\Debug\net8.0\Object.pdb
 C:\Users\Admin\Desktop\Object\Object\obj\Debug\net8.0\Object.genruntimeconfig.cache
 C:\Users\Admin\Desktop\Object\Object\obj\Debug\net8.0\ref\Object.dll
 C:\Users\Admin\Desktop\Object\Object\obj\Debug\net8.0\Object.sourcelink.json
+C:\Users\Admin\Desktop\Object\Object\bin\Debug\net8.0\CloudinaryDotNet.dll
+C:\Users\Admin\Desktop\Object\Object\bin\Debug\net8.0\Newtonsoft.Json.dll

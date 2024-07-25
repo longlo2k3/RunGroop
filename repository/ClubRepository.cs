@@ -17,7 +17,6 @@ namespace Object.repository
         {
             _context.Add(club);
             return Save();
-            
         }
 
         public bool Delete(Club club)
