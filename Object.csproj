@@ -24,4 +24,15 @@
     <None Include="C:\Users\Admin\Desktop\Object\Object\.editorconfig" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Views\Race\Create.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Race\Edit.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

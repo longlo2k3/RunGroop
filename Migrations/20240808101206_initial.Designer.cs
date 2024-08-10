@@ -12,8 +12,8 @@ using Object.Data;
 namespace Object.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240716162149_IntialCreate")]
-    partial class IntialCreate
+    [Migration("20240808101206_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -72,6 +72,34 @@ namespace Object.Migrations
                     b.HasIndex("AddressId");
 
                     b.ToTable("AppUser");
+                });
+
+            modelBuilder.Entity("Object.Models.Cart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Carts");
                 });
 
             modelBuilder.Entity("Object.Models.Club", b =>

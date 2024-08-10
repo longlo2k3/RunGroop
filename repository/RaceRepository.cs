@@ -34,6 +34,11 @@ namespace Object.repository
             return await _context.Races.Include(a=>a.Address).FirstOrDefaultAsync(p => p.Id == id);
         }
 
+        public async Task<Races> GetByIdAsyncNoTracking(int id)
+        {
+            return await _context.Races.Include(a => a.Address).AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
+        }
+
         public async Task<IEnumerable<Races>> GetRaceByCity(string city)
         {
             return await _context.Races.Include(a=>a.Address).Where(c=>c.Address.City.Contains(city)).ToListAsync(); 

@@ -14,7 +14,7 @@
                             <a href="@Url.Action("Detail", "Club", new {id= item.Id})">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             </a>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                <button onclick="location.href='@Url.Action("Edit", "Club", new {id = item.Id})'" type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                         </div>
                         <small class="text-body-secondary">@item.ClubCategory</small>
                     </div>

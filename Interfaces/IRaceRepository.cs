@@ -6,6 +6,7 @@ namespace Object.Interfaces
     {
         Task<IEnumerable<Races>> GetAll();
         Task<Races> GetByIdAsync(int id);
+        Task<Races> GetByIdAsyncNoTracking(int id);
         Task<IEnumerable<Races>> GetRaceByCity(string city);
         bool Add(Races race);
         bool Update(Races race);
