@@ -51,7 +51,7 @@ namespace Object.Controllers
                     Title = race.Title, 
                     Description = race.Description, 
                     URL = race.Image,
-                    RaceCategory = race.RaceCategory
+                    RaceCategory = race.RaceCategory,
                 };
                 return View(raceVM);
             } 

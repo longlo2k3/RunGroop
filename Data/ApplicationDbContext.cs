@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Object.Models;
 
 namespace Object.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<AppUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options) : base(options)
         {
@@ -11,7 +12,6 @@ namespace Object.Data
         }
         public DbSet<Races> Races { get; set; }
         public DbSet<Club> Clubs { get; set; }
-        public DbSet<Cart> Carts { get; set; }
         public DbSet<Address> Addresses { get; set; }
     }
 }

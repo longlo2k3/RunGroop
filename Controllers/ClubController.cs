@@ -75,7 +75,7 @@ namespace Object.Controllers
             {
                 Title = club.Title,
                 Description = club.Description,
-                AddressID = club.AddressID,
+                AddressID = club.AddressId,
                 Address = club.Address,
                 ClubCategory = club.ClubCategory,
                 URL = club.Image,
@@ -113,7 +113,7 @@ namespace Object.Controllers
             var club = new Club
             {
                 Id = id,
-                AddressID = clubVM.AddressID,
+                AddressId = clubVM.AddressID,
                 Title = clubVM.Title,
                 Description = clubVM.Description,
                 Image = photoResult.Url.ToString(),
