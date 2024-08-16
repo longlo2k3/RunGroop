@@ -1,4 +1,5 @@
 ﻿using CloudinaryDotNet.Actions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Object.Data;
@@ -8,6 +9,7 @@ using Object.ViewModel;
 
 namespace Object.Controllers
 {
+
     public class ClubController : Controller
     {
         private readonly IClubRepository _clubRepository;
